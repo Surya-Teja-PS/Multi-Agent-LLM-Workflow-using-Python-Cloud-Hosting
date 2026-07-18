@@ -47,3 +47,4 @@ This project is configured for seamless deployment on platforms like Render. It 
 
 📝 Credits
 Built by P.S.Surya Teja. Feel free to contribute or reach out if you have suggestions for improvement!
+![Study Assistant UI](app-screenshot.png)
