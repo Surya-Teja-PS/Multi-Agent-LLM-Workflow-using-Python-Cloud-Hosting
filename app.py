@@ -3,11 +3,8 @@ import gradio as gr
 from google import genai
 from google.genai import types
 
-import os
-from google.colab import userdata
-
-os.environ['GEMINI_API_KEY'] = userdata.get('GEMINI_API_KEY')
-
+# Initialize the client using the environment variable
+# Ensure GEMINI_API_KEY is set in your Render 'Environment' settings
 client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
 
 personalities = {
@@ -32,7 +29,7 @@ def study_assistant(question, persona):
     system_prompt = personalities[persona]
 
     response = client.models.generate_content(
-        model="gemini-3.5-flash", 
+        model="gemini-3.5-flash",
         config=types.GenerateContentConfig(
             system_instruction=system_prompt,
             temperature=0.4,
@@ -54,4 +51,4 @@ demo = gr.Interface(
 )
 
 if __name__ == "__main__":
-    demo.launch(debug=True)
+    demo.launch()
