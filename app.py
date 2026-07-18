@@ -16,7 +16,7 @@ def study_assistant(question, persona):
     system_prompt = personalities[persona]
 
     response = client.models.generate_content(
-        model="gemini-3.5-flash", # Changed to a valid model name
+        model="gemini-2.0-flash", # Changed to a valid model name
         config=types.GenerateContentConfig(
             system_instruction=system_prompt,
             temperature=0.4,
