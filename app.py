@@ -1,9 +1,8 @@
 import gradio as gr
 from google import genai
 from google.genai import types
-from google.colab import userdata
 
-client = genai.Client(api_key=userdata.get("GEMINI_API_KEY"))
+client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
 
 personalities = {
   "Friendly":
