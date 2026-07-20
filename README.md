@@ -22,22 +22,6 @@ Frontend: Gradio
 
 Hosting: Render (Web Service)
 
-🚀 How to Run Locally
-Clone the repository:
-
-Bash
-git clone https://github.com/YourUsername/YourRepoName.git
-cd YourRepoName
-Install dependencies:
-
-Bash
-pip install -r requirements.txt
-Set your API Key:
-
-Bash
-export GEMINI_API_KEY='your_api_key_here'
-Run the application:
-
 Bash
 python app.py
 🌐 Deployment
